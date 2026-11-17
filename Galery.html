@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<title>Indie Arcade Hub - Galeri</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>try{var d=document.documentElement,t=JSON.parse(localStorage.getItem("iah_theme")||"\"cyber\""),m=JSON.parse(localStorage.getItem("iah_mode")||"null")||(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");d.dataset.theme=t;d.dataset.mode=m}catch(e){document.documentElement.dataset.theme="cyber";document.documentElement.dataset.mode="dark"}</script>
+</head>
+<body>
+<header id="site-header"></header>
+<main class="wrap">
+  <h1>Galeri visual</h1>
+  <p class="lead">Klik bintang untuk memberi rating. Rata-rata langsung berubah di browsermu.</p>
+  <div class="btn-row filters" role="group" aria-label="Filter galeri">
+    <button class="btn active" data-filter="all">Semua</button>
+    <button class="btn" data-filter="screenshot">Screenshot</button>
+    <button class="btn" data-filter="karakter">Karakter</button>
+    <button class="btn" data-filter="sketsa">Sketsa</button>
+  </div>
+  <div class="grid" id="gallery">
+    <article class="panel card" data-id="g1" data-cat="screenshot" data-seed="4.6" data-count="22">
+      <div class="cover c1">🏃</div>
+      <h3>Neon Runner: Kota Malam</h3><p class="muted">screenshot</p><p>Screenshot level 3 dengan efek hujan neon.</p>
+      <div class="rating" aria-label="Rating Neon Runner: Kota Malam"></div>
+    </article>
+    <article class="panel card" data-id="g2" data-cat="screenshot" data-seed="4.2" data-count="15">
+      <div class="cover c2">🚀</div>
+      <h3>Star Pixel: Boss Fight</h3><p class="muted">screenshot</p><p>Pertarungan melawan boss kapal induk.</p>
+      <div class="rating" aria-label="Rating Star Pixel: Boss Fight"></div>
+    </article>
+    <article class="panel card" data-id="g3" data-cat="karakter" data-seed="4.8" data-count="31">
+      <div class="cover c3">🤖</div>
+      <h3>Bolt Bot: Model Karakter</h3><p class="muted">karakter</p><p>Lembar model robot dari empat sudut.</p>
+      <div class="rating" aria-label="Rating Bolt Bot: Model Karakter"></div>
+    </article>
+    <article class="panel card" data-id="g4" data-cat="karakter" data-seed="4.0" data-count="12">
+      <div class="cover c4">🧙</div>
+      <h3>Rune Cave: Penyihir</h3><p class="muted">karakter</p><p>Aset karakter utama beserta animasi idle.</p>
+      <div class="rating" aria-label="Rating Rune Cave: Penyihir"></div>
+    </article>
+    <article class="panel card" data-id="g5" data-cat="sketsa" data-seed="3.9" data-count="9">
+      <div class="cover c5">✏️</div>
+      <h3>Sketsa Desain Level</h3><p class="muted">sketsa</p><p>Coretan tata letak level pertama di kertas.</p>
+      <div class="rating" aria-label="Rating Sketsa Desain Level"></div>
+    </article>
+    <article class="panel card" data-id="g6" data-cat="sketsa" data-seed="4.4" data-count="14">
+      <div class="cover c6">🗺️</div>
+      <h3>Peta Dunia Rune Cave</h3><p class="muted">sketsa</p><p>Konsep peta gua dengan lima zona.</p>
+      <div class="rating" aria-label="Rating Peta Dunia Rune Cave"></div>
+    </article>
+  </div>
+
+  <h2>Kirim feedback</h2>
+  <div class="panel">
+    <div class="form">
+      <input id="fbName" placeholder="Nama (opsional)" maxlength="30" aria-label="Nama">
+      <textarea id="fbText" rows="3" placeholder="Tulis pendapatmu tentang game kami" maxlength="300" aria-label="Feedback"></textarea>
+      <div class="btn-row"><button class="btn primary" id="fbSend">Kirim feedback</button><button class="btn ghost" id="fbClear">Hapus semua</button></div>
+    </div>
+    <ul id="fbList" class="fb-list"></ul>
+  </div>
+</main>
+<footer id="site-footer"></footer>
+<script src="script.js"></script>
+</body>
+</html>
